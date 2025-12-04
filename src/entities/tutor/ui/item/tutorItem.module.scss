@@ -1,0 +1,47 @@
+
+
+.item{
+    border-bottom: 1px solid var(--black);
+    background-color: var(--green);
+    
+    &.balanceNegative{
+        background-color: var(--red);
+    }
+    
+    &.onlyTrial{
+        background-color: var(--yellow-dark);
+    }
+
+    
+    
+    &.newbie, &.nohighlight{
+        background-color: #FFF;
+        
+        .link{
+            color: var(--black);
+            transition: all .15s ease;
+            
+            &:hover{
+                color: var(--black-hover);
+            }
+        }
+    }
+
+
+    td{
+        padding: 16px 6px;
+    }
+
+    .feature{
+        width: 260px;
+    }
+
+    .link{
+        color: var(--gray-light);
+        transition: all .15s ease;
+
+        &:hover{
+            color: #FFF;
+        }
+    }
+}

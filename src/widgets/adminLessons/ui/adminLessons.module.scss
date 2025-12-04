@@ -1,0 +1,41 @@
+.container {
+    min-height: 510px;
+    
+    .title{
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+
+    .loader{
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    .count {
+        margin-top: 20px;
+        text-align: start;
+    }
+
+    .table{
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+        text-align: start;
+
+        .item{
+            border-bottom: 1px solid var(--black);
+            th{
+                text-align: start;
+                padding: 16px 6px;
+            }
+
+        }
+    }
+    .features{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 40px;
+    }
+}

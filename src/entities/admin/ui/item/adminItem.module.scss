@@ -1,0 +1,22 @@
+
+
+.item{
+    border-bottom: 1px solid var(--black);
+    
+    td{
+        padding: 16px 6px;
+    }
+
+    .feature{
+        width: 260px;
+    }
+
+    .link{
+        color: var(--black);
+        transition: all .15s ease;
+            
+        &:hover{
+            color: var(--black-hover);
+        }
+    }
+}

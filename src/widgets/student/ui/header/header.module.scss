@@ -1,0 +1,22 @@
+.header{
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        
+        .warnings{
+            display: flex;
+            gap: 20px;
+        }
+
+        .features{
+            display: flex;
+            gap: 20px;
+
+            .edit{
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+            }
+        }
+    }

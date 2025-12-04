@@ -1,0 +1,1 @@
+export { LayoutPages } from "./LayoutPages";

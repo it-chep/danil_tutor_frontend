@@ -1,0 +1,22 @@
+
+
+
+.container{
+
+
+    img{
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .change{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 400px;
+        padding: 30px 50px;
+        background-color: #fff;
+        border-radius: 20px;
+    }
+}

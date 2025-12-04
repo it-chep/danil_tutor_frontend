@@ -1,0 +1,40 @@
+
+
+
+.navPages{
+    height: 100%;
+
+    .list{
+        display: flex;
+        gap: 40px;
+        height: 100%;
+
+        .link{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+
+            &.selected{
+                a{
+                    font-weight: 500;
+                }
+            }
+
+            a{
+                display: flex;
+                align-items: center;
+                .linkVisible{
+                    position: absolute;
+                }
+                .linkNotVisible{
+                    font-weight: 500;
+                    opacity: 0;
+                }
+
+                &:hover{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

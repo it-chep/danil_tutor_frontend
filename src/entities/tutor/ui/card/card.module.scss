@@ -1,0 +1,17 @@
+
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 380px;
+
+
+    .highlight{
+        color: var(--blue);
+        transition: all .15s ease;
+
+        &:hover{
+            color: var(--blue-hover);
+        }
+    }
+}

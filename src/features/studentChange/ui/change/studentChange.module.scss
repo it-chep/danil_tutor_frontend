@@ -1,0 +1,14 @@
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 40px auto;
+    width: 700px;
+
+    .title{
+        display: flex;
+        justify-content: center;
+    }
+}

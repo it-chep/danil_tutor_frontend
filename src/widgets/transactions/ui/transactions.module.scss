@@ -1,0 +1,49 @@
+.container{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid black;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    height: 480px;
+    overflow: hidden;
+    margin-top: 20px;
+
+    .title{
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+
+    .count{
+        margin-top: 20px;
+        text-align: start;
+    }
+
+    .loader{
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    .wrapTable{
+        overflow: auto;
+        height: 360px;
+        margin-top: 20px;
+    }
+
+    .table{
+        border-collapse: collapse;
+        width: 100%;
+        text-align: start;
+
+        .item{
+            border-bottom: 1px solid var(--black);
+            th{
+                text-align: start;
+                padding: 16px 6px;
+            }
+        }
+    }
+}

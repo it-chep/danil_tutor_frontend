@@ -1,0 +1,25 @@
+
+
+
+
+.container{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    width: 300px;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 8px;
+    font-size: 18;
+    font-weight: 500;
+    z-index: 99;
+    color: #FFF;
+
+    &.ok{
+        background-color: #228b22;
+    }
+    &.error{
+        background-color: #8b0000;
+    }
+}

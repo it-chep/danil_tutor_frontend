@@ -1,0 +1,26 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .loader{
+        margin: 20px;
+    }
+
+    .data{
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+        font-size: 17px;
+
+        .sub{
+            font-weight: 500;
+        }
+
+        span{
+            margin-left: 10px;
+        }
+    }
+}

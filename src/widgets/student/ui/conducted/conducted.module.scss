@@ -1,0 +1,51 @@
+
+.title{
+    padding: 12px 40px;
+    border-radius: 16px;
+    background-color: var(--blue);
+    cursor: pointer;
+    transition: all .15s ease;
+    width: 260px;
+
+    &:hover{
+        background-color: var(--blue-hover);
+    }
+}
+
+.content{
+    background-color: #fff;
+    padding: 40px 80px;
+    border-radius: 20px;
+    width: 500px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .h2{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+
+    .selectedHour{
+        width: 310px;
+        position: relative;
+        z-index: 9;
+    }
+
+    .calendar{
+        position: relative;
+        z-index: 1;
+        width: 310px;
+        margin-top: 10px;
+    }
+
+    .button{
+        width: 310px;
+        height: 40px;
+        margin-top: 20px;
+    }
+}

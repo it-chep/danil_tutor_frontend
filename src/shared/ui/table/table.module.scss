@@ -1,0 +1,19 @@
+
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    th{
+        text-align: start;
+    }
+
+    td, th{
+        padding: 12px 6px;
+    }
+
+    tr{
+        border-bottom: 1px solid var(--gray);
+
+    }
+}

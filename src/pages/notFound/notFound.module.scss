@@ -1,0 +1,28 @@
+
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+
+    .code{
+        font-size: 52px;
+        font-weight: 600;
+    }
+
+    .text{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .button{
+        margin-top: 32px;
+        width: 260px;
+        height: 40px;
+    }
+}

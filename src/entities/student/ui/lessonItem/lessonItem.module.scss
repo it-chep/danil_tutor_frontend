@@ -1,0 +1,22 @@
+.item{
+    border-bottom: 1px solid var(--black);
+    
+    td{
+        padding: 16px 6px;
+    }
+
+    .feature{
+        width: 260px;
+    }
+
+    .fio{
+        a{
+            color: var(--blue);
+            transition: all .15s ease;
+
+            &:hover{
+                color: var(--blue-hover);
+            }
+        }
+    }
+}

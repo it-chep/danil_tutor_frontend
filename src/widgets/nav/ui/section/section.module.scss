@@ -1,0 +1,45 @@
+
+
+.container{
+    width: 100%;
+
+    .title{
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        background-color: var(--yellow);
+        font-size: 24px;
+        border-radius: 4px;
+    }
+
+    .sections{
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+        
+        .section{
+            display: flex;
+            justify-content: center;
+            align-self: flex-start;
+            text-align: center;
+            width: 240px;
+            min-width: 240px;
+
+            >a{
+                background-color: var(--blue-light);
+                width: 100%;
+                font-size: 20px;
+                border-radius: 12px;
+                padding: 20px 40px;
+                transition: all .15s ease;
+
+                &:hover{
+                    background-color: var(--blue);
+                }
+            }
+        }
+    }
+
+
+
+}

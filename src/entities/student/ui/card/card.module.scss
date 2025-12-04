@@ -1,0 +1,21 @@
+
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .highlight{
+        color: var(--blue);
+        transition: all .15s ease;
+    }
+    .noTgID{
+        color: var(--red);
+    }
+    a:hover{
+        color: var(--blue-hover);
+    }
+
+    .button{
+        width: 200px;
+    }
+}

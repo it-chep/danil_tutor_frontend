@@ -1,0 +1,31 @@
+.container{
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid black;
+    position: relative;
+    z-index: 1;
+
+    .content {
+        height: 480px;
+        overflow: hidden;
+        margin-top: 20px;
+    
+        .title{
+            font-size: 24px;
+            font-weight: 600;
+        }
+    
+        .loader{
+            margin: 20px;
+        }
+    
+        .data{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-weight: 500;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    }
+}

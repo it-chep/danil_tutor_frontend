@@ -1,0 +1,26 @@
+
+
+
+
+
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    text-align: start;
+
+    .item{
+        border-bottom: 1px solid var(--black);
+        th{
+            text-align: start;
+            padding: 16px 6px;
+        }
+    }
+
+    .features{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 40px;
+    }
+}

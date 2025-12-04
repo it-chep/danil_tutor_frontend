@@ -1,0 +1,76 @@
+
+.myCheckbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #606060;
+    gap: 10px;
+
+    &.top{
+        align-items: start;
+
+        .checkboxView {
+            margin-top: 2px;
+        }
+    }
+
+    &.checkboxTop{
+        align-items: start;
+    }
+
+    >input{
+        display: none;
+    }
+
+    .checkboxText{
+        color: black;
+        transition: all .15s ease;
+        // background-color: rgba(155, 199, 254, 0.4);
+        // border-radius: 4px;
+        // padding: 2px 4px;
+    }
+
+    &:hover{
+        .checkboxText{
+            color: var(--blue);
+        }
+    }
+}
+
+.checkboxView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    min-height: 18px;
+    min-width: 18px;
+    border: 1px solid #606060;
+    border-radius: 6px;
+    background: transparent;
+    transition: .3s;
+}
+
+.checkboxIcon {
+    opacity: 0;
+    transition: .3s;
+}
+
+.checkbox:checked + .checkboxView {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.checkboxText {
+    transition: .3s;
+}
+
+.checkbox:checked + .checkboxView .checkboxIcon {
+    opacity: 1;
+}
+
+
+.errorText{
+    color: #ff4141;
+    font-size: 14px;
+}

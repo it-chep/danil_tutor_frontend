@@ -1,0 +1,24 @@
+
+
+.container{
+    
+    .title{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: 600;
+
+        svg.open{
+            transform: rotate(180deg);
+        }
+    }
+
+    .content {
+        height: 0;
+        overflow: hidden;
+        transition: height 1s ease;
+    }
+
+}

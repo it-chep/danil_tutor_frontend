@@ -1,0 +1,44 @@
+
+.container{
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+
+    .text{
+        font-size: 18px;
+    }
+
+    --time: .35s;
+
+    .toggleSwitch{
+        position: relative;
+        background-color: var(--black);
+        border-radius: 36px;
+        width: 54px;
+        min-width: 54px;
+        height: 22px;
+        min-height: 22px;
+        transition: all var(--time) ease;
+
+
+        .thumb{
+            background-color: var(--blue);
+            transition: all var(--time) ease;
+            width: 20px;
+            height: 20px;
+            left: 2px;
+            top: 1px;
+            border-radius: 32px;
+            position: absolute;
+            
+        }
+        &.selected{
+            background-color: var(--blue);
+
+            .thumb{
+                background-color: var(--black);
+                left: 32px;
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.container{
+    height: 90px;
+
+    .header{
+        margin-top: 6px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        .badge{
+            padding: 8px 20px;
+            width: 100%;
+            background-color: var(--gray);
+            color: #000;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all .25s ease;
+
+            &.selected{
+                background-color: var(--black-hover);
+                color: #fff;
+            }
+
+            &:hover{
+                background-color: var(--black-hover);
+                color: #fff;
+            }
+        }
+    }
+    .input{
+        margin-top: 10px;
+    }
+}

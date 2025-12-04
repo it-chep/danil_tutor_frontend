@@ -1,0 +1,48 @@
+.container{
+    margin-top: 20px;
+    border-top: 2px solid black;
+    position: relative;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.content {
+    margin-top: 20px;
+    height: 480px;
+    overflow: hidden;
+
+    .title{
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+
+    .loader{
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    .wrapTable{
+        overflow: auto;
+        height: 360px;
+        margin-top: 20px;
+    }
+
+    .count{
+        margin-top: 20px;
+    }
+
+    .table{
+        border-collapse: collapse;
+        width: 100%;
+        text-align: start;
+
+        .item{
+            border-bottom: 1px solid var(--black);
+            th{
+                text-align: start;
+                padding: 16px 6px;
+            }
+        }
+    }
+}

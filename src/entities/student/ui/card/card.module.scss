@@ -4,6 +4,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    &.changeState{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .changeState{
+        display: flex;
+        align-items: center;
+        height: 70px;
+        width: 100%;
+        margin-top: 20px;
+        border-bottom: 2px solid var(--black);
+        border-top: 2px solid var(--black);
+    }
+
     .highlight{
         color: var(--blue);
         transition: all .15s ease;

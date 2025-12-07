@@ -12,10 +12,11 @@ interface IProps {
     onSelected: (item: IItem) => (selected: boolean) => void
     isLoading: boolean;
     selectedCount?: boolean;
+    noDelete?: boolean;
 }
 
 export const DropDownListSelected: FC<IProps & PropsWithChildren> = (
-    {selectedIdItems, items, isLoading, onSelected, selectedCount, children}
+    {selectedIdItems, items, isLoading, onSelected, selectedCount, noDelete, children}
 ) => {
 
     const [open, setOpen] = useState<boolean>(false)
@@ -63,14 +64,18 @@ export const DropDownListSelected: FC<IProps & PropsWithChildren> = (
                                         key={item.id}
                                     >
                                         {item.name}
-                                        <svg 
-                                            className={classes.delete } 
-                                            onClick={() => onSelected(item)(false)} 
-                                            width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path d="M25 7L7 25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                            <path d="M25 25L7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                        </svg>
+                                        {
+                                            !noDelete
+                                                &&
+                                            <svg 
+                                                className={classes.delete } 
+                                                onClick={() => onSelected(item)(false)} 
+                                                width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path d="M25 7L7 25" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                                <path d="M25 25L7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                            </svg>
+                                        }
                                     </section>
                                 )
                             }

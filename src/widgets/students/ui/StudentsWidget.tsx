@@ -57,13 +57,13 @@ export const StudentsWidget: FC<IProps> = ({request, add, highlight=true}) => {
     }
 
     const isOne = useRef<boolean>(true)
-    const onSelectedFilters = (tgAdmins: string[], isLost: boolean) => {
+    const onSelectedFilters = (tgAdmins: string[], states: number[], isLost: boolean) => {
         if(isOne.current){
             isOne.current = false
             return
         }
-        if(tgAdmins.length || isLost){
-            getData(() => studentService.getAllByFilters(tgAdmins, isLost))
+        if(tgAdmins.length || isLost || states.length){
+            getData(() => studentService.getAllByFilters(tgAdmins, states, isLost))
         }
         else{
             getData(request)

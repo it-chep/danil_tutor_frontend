@@ -1,5 +1,5 @@
 import { fetchAuth } from "../../../shared/api/ApiService"
-import { ILesson, INotifications, IStudent, IStudentChange, IStudentData, 
+import { ILesson, INotifications, IState, IStudent, IStudentChange, IStudentData, 
     IStudentFinance, ITransactions } from "../model/types"
 
 
@@ -42,6 +42,15 @@ class StudentService {
         })
     }
 
+    async changeState(studentId: number, state: number) {
+        await fetchAuth(process.env.REACT_APP_SERVER_URL_ADMIN + `/students/${studentId}/state`, {
+            method: "POST",
+            body: JSON.stringify({
+               state
+            })
+        })
+    }
+
     async getFinance(id: number, from: string, to: string): Promise<IStudentFinance> {
         if(this.controller){
             this.controller.abort()
@@ -78,16 +87,22 @@ class StudentService {
         return tg_admins
     }
 
+    async getStates(): Promise<IState[]> {
+        const res = await fetchAuth(process.env.REACT_APP_SERVER_URL_ADMIN + '/students/states')
+        const {states}: {states: IState[]} = await res.json()
+        return  states
+    }
+
     async getAll(): Promise<{students: IStudent[], students_count: number}> {
         const res = await fetchAuth(process.env.REACT_APP_SERVER_URL_ADMIN + '/students')
         const {students, students_count}: {students: IStudent[], students_count: number} = await res.json()
         return {students, students_count}
     }
 
-    async getAllByFilters(tg_admins_usernames: string[], is_lost: boolean): Promise<{students: IStudent[], students_count: number}> {
+    async getAllByFilters(tg_admins_usernames: string[], states: number[], is_lost: boolean): Promise<{students: IStudent[], students_count: number}> {
         const res = await fetchAuth(process.env.REACT_APP_SERVER_URL_ADMIN + '/students/filter', {
             method: 'POST',
-            body: JSON.stringify({tg_admins_usernames, is_lost})
+            body: JSON.stringify({tg_admins_usernames, states, is_lost})
         })
         const {students, students_count}: {students: IStudent[], students_count: number} = await res.json()
         return {students, students_count}

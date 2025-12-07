@@ -22,6 +22,7 @@ export interface IStudentData {
     cost_per_hour: string;
     subject_name : string;
     subject_id: number;
+    state: number;
     tutor_name: string;
     tutor_id: number;
     parent_full_name: string;
@@ -81,4 +82,10 @@ export interface ITransactions {
 export interface INotifications {
     id: number;
     created_at: string;
+}
+
+export interface IState {
+    state: number;
+    name: string;
+    desc: string;
 }

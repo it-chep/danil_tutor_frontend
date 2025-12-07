@@ -1,19 +1,19 @@
-import { FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren, ReactElement } from "react";
 import classes from './card.module.scss'
 import { DataList } from "../../../../shared/ui/dataList/DataList";
 import { IStudentData } from "../../model/types";
 import { Link } from "react-router-dom";
-import { MyButton } from "../../../../shared/ui/button";
 
 interface IProps {
     student: IStudentData;
+    changeState: ReactElement | null;
 }
 
-export const StudentCard: FC<IProps & PropsWithChildren> = ({student, children}) => {
+export const StudentCard: FC<IProps & PropsWithChildren> = ({student, changeState, children}) => {
 
     
     return (
-        <section className={classes.card}>
+        <section className={classes.card + (changeState ? ` ${classes.changeState}` : '')}>
             <DataList 
                 title="Данные студента"
                 list={[
@@ -63,6 +63,13 @@ export const StudentCard: FC<IProps & PropsWithChildren> = ({student, children})
                     <section>{children}</section>
                 ]}
             />
+            {
+                changeState
+                    &&
+                <section className={classes.changeState}>
+                    {changeState}
+                </section>
+            }
         </section>
     )
 }

@@ -8,4 +8,4 @@ export { useStudentActions } from "./lib/hooks/useStudentActions";
 export { default as studentReducer } from './model/reducers/StudentSlice'
 export { studentService } from "./api/StudentService";
 export { type IStudent, type IStudentData, type IStudentFinance, type IStudentChange, 
-    type ILesson, type ITransactions, type INotifications } from './model/types'
+    type ILesson, type ITransactions, type INotifications, type IState } from './model/types'

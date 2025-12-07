@@ -13,6 +13,7 @@ import { StudentsMove } from "../../../../features/studentsMove";
 import { ITutor } from "../../../../entities/tutor";
 import { ChangeStudentBalance } from "../../../../features/changeStudentBalance";
 import { LoaderSpinner } from "../../../../shared/ui/spinner";
+import { ChangeState } from "../../../../features/changeState";
 
 interface IProps {
     id: number;
@@ -81,6 +82,13 @@ export const StudentWidget: FC<IProps & PropsWithChildren> = ({id, children}) =>
                         <Header student={student} />
                         <StudentCard
                             student={student}
+                            changeState={
+                                my.role === 'admin'
+                                    ?
+                                <ChangeState stateId={student.state} studentId={student.id} />
+                                    :
+                                null
+                            }
                         >
                             <ChangeStudentBalance 
                                 studentId={student.id} 

@@ -111,6 +111,9 @@ export const StudentFilters: FC<IProps> = ({onSelectedFilters}) => {
     return (
         <section className={classes.container}>
             <section className={classes.dropDown}>
+                <section className={classes.sign}>
+                    Аккаунты
+                </section>
                 <DropDownListSelected 
                     selectedCount
                     isLoading={isLoading}
@@ -120,6 +123,9 @@ export const StudentFilters: FC<IProps> = ({onSelectedFilters}) => {
                 />
             </section>
             <section className={classes.dropDown}>
+                <section className={classes.sign}>
+                    Статусы
+                </section>
                 <DropDownListSelected 
                     selectedCount
                     isLoading={isLoading}
